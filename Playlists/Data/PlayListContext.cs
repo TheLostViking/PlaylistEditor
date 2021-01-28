@@ -36,106 +36,19 @@ namespace Playlists
         {
             modelBuilder.HasAnnotation("Relational:Collation", "Finnish_Swedish_CI_AS");
 
-            modelBuilder.Entity<Album>(entity =>
-            {
-                entity.ToTable("albums", "music");
+            new AlbumEntityTypeConfiguration().Configure(modelBuilder.Entity<Album>());
 
-                entity.Property(e => e.AlbumId).ValueGeneratedNever();
+            new ArtistEntityTypeConfiguration().Configure(modelBuilder.Entity<Artist>());
 
-                entity.Property(e => e.Title)
-                    .IsRequired()
-                    .HasMaxLength(160);
+            new GenreEntityTypeConfiguration().Configure(modelBuilder.Entity<Genre>());
 
-                entity.HasOne(d => d.Artist)
-                    .WithMany(p => p.Albums)
-                    .HasForeignKey(d => d.ArtistId)
-                    .OnDelete(DeleteBehavior.ClientCascade)
-                    .HasConstraintName("FK_albums_artists");
-            });
+            new MediaTypeEntityTypeConfiguration().Configure(modelBuilder.Entity<MediaType>());
 
-            modelBuilder.Entity<Artist>(entity =>
-            {
-                entity.ToTable("artists", "music");
+            new PlaylistEntityTypeConfiguration().Configure(modelBuilder.Entity<Playlist>());
 
-                entity.Property(e => e.ArtistId).ValueGeneratedNever();
+            new PlaylistTrackEntityTypeConfiguration().Configure(modelBuilder.Entity<PlaylistTrack>());
 
-                entity.Property(e => e.Name).HasMaxLength(120);
-            });
-
-            modelBuilder.Entity<Genre>(entity =>
-            {
-                entity.ToTable("genres", "music");
-
-                entity.Property(e => e.GenreId).ValueGeneratedNever();
-
-                entity.Property(e => e.Name).HasMaxLength(120);
-            });
-
-            modelBuilder.Entity<MediaType>(entity =>
-            {
-                entity.ToTable("media_types", "music");
-
-                entity.Property(e => e.MediaTypeId).ValueGeneratedNever();
-
-                entity.Property(e => e.Name).HasMaxLength(120);
-            });
-
-            modelBuilder.Entity<Playlist>(entity =>
-            {
-                entity.ToTable("playlists", "music");
-
-                entity.Property(e => e.PlaylistId).ValueGeneratedNever();
-
-                entity.Property(e => e.Name).HasMaxLength(120);
-            });
-
-            modelBuilder.Entity<PlaylistTrack>(entity =>
-            {
-                modelBuilder.Entity<PlaylistTrack>().HasKey(e => new { e.PlaylistId, e.TrackId });
-
-                entity.ToTable("playlist_track", "music");
-
-                entity.HasOne(d => d.Playlist)
-                    .WithMany()
-                    .HasForeignKey(d => d.PlaylistId)
-                    .OnDelete(DeleteBehavior.ClientCascade)
-                    .HasConstraintName("FK_playlist_track_playlists");
-
-                entity.HasOne(d => d.Track)
-                    .WithMany()
-                    .HasForeignKey(d => d.TrackId)
-                    .OnDelete(DeleteBehavior.ClientCascade)
-                    .HasConstraintName("FK_playlist_track_tracks");
-            });
-
-            modelBuilder.Entity<Track>(entity =>
-            {
-                entity.ToTable("tracks", "music");
-
-                entity.Property(e => e.TrackId).ValueGeneratedNever();
-
-                entity.Property(e => e.Composer).HasMaxLength(220);
-
-                entity.Property(e => e.Name)
-                    .IsRequired()
-                    .HasMaxLength(200);
-
-                entity.HasOne(d => d.Album)
-                    .WithMany(p => p.Tracks)
-                    .HasForeignKey(d => d.AlbumId)
-                    .HasConstraintName("FK_tracks_albums");
-
-                entity.HasOne(d => d.Genre)
-                    .WithMany(p => p.Tracks)
-                    .HasForeignKey(d => d.GenreId)
-                    .HasConstraintName("FK_tracks_genres");
-
-                entity.HasOne(d => d.MediaType)
-                    .WithMany(p => p.Tracks)
-                    .HasForeignKey(d => d.MediaTypeId)
-                    .OnDelete(DeleteBehavior.ClientCascade)
-                    .HasConstraintName("FK_tracks_media_types");
-            });
+            new TrackEntityTypeConfiguration().Configure(modelBuilder.Entity<Track>());
 
             OnModelCreatingPartial(modelBuilder);
         }

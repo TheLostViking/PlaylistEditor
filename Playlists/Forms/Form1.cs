@@ -6,7 +6,6 @@ namespace Playlists
     public partial class FormMain : Form
 
     {
-
         static FormMain _obj;
 
         public static FormMain Instance
