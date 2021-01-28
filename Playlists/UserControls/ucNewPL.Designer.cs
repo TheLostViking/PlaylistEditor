@@ -37,6 +37,7 @@ namespace Playlists
             // 
             // tbPLName
             // 
+            this.tbPLName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbPLName.Location = new System.Drawing.Point(164, 223);
             this.tbPLName.Name = "tbPLName";
             this.tbPLName.Size = new System.Drawing.Size(254, 23);
@@ -45,6 +46,7 @@ namespace Playlists
             // 
             // lbEnterPLname
             // 
+            this.lbEnterPLname.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbEnterPLname.AutoSize = true;
             this.lbEnterPLname.Font = new System.Drawing.Font("Franklin Gothic Medium", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbEnterPLname.Location = new System.Drawing.Point(119, 166);
@@ -55,6 +57,7 @@ namespace Playlists
             // 
             // bSavePL
             // 
+            this.bSavePL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bSavePL.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.bSavePL.Cursor = System.Windows.Forms.Cursors.Default;
             this.bSavePL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -69,6 +72,7 @@ namespace Playlists
             // 
             // bCancelPL
             // 
+            this.bCancelPL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bCancelPL.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.bCancelPL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bCancelPL.ForeColor = System.Drawing.SystemColors.ControlLightLight;

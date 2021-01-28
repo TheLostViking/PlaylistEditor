@@ -162,6 +162,7 @@ namespace Playlists
             // 
             // panelMain
             // 
+            this.panelMain.AutoSize = true;
             this.panelMain.BackColor = System.Drawing.Color.LightGreen;
             this.panelMain.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -180,10 +181,9 @@ namespace Playlists
             this.Controls.Add(this.panelSideBar);
             this.Font = new System.Drawing.Font("Leelawadee UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
             this.Name = "FormMain";
             this.ShowIcon = false;
-            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Playlists";
             this.Load += new System.EventHandler(this.FormMain_Load);
@@ -191,6 +191,7 @@ namespace Playlists
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

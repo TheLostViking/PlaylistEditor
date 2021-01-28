@@ -37,6 +37,7 @@ namespace Playlists
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(228, 158);
@@ -47,6 +48,7 @@ namespace Playlists
             // 
             // tbNewArtist
             // 
+            this.tbNewArtist.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbNewArtist.Location = new System.Drawing.Point(217, 200);
             this.tbNewArtist.Name = "tbNewArtist";
             this.tbNewArtist.Size = new System.Drawing.Size(200, 23);
@@ -55,25 +57,27 @@ namespace Playlists
             // 
             // buttonCancelArtist
             // 
+            this.buttonCancelArtist.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonCancelArtist.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.buttonCancelArtist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCancelArtist.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonCancelArtist.Location = new System.Drawing.Point(342, 241);
             this.buttonCancelArtist.Name = "buttonCancelArtist";
-            this.buttonCancelArtist.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancelArtist.Size = new System.Drawing.Size(75, 28);
             this.buttonCancelArtist.TabIndex = 5;
             this.buttonCancelArtist.Text = "Cancel";
             this.buttonCancelArtist.UseVisualStyleBackColor = false;
             // 
             // buttonSaveArtist
             // 
+            this.buttonSaveArtist.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonSaveArtist.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.buttonSaveArtist.Cursor = System.Windows.Forms.Cursors.Default;
             this.buttonSaveArtist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSaveArtist.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonSaveArtist.Location = new System.Drawing.Point(217, 241);
             this.buttonSaveArtist.Name = "buttonSaveArtist";
-            this.buttonSaveArtist.Size = new System.Drawing.Size(75, 23);
+            this.buttonSaveArtist.Size = new System.Drawing.Size(75, 28);
             this.buttonSaveArtist.TabIndex = 4;
             this.buttonSaveArtist.Text = "Save";
             this.buttonSaveArtist.UseVisualStyleBackColor = false;
@@ -83,6 +87,7 @@ namespace Playlists
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.LightGreen;
             this.Controls.Add(this.buttonCancelArtist);
             this.Controls.Add(this.buttonSaveArtist);
