@@ -71,5 +71,20 @@ namespace Playlists
                 MessageBox.Show("Only digits and letters please!");
             }
         }
+
+        private void buttonCancelArtist_Click(object sender, EventArgs e)
+        {
+            if (!FormMain.Instance.PnlContainer.Controls.ContainsKey("UCHome"))
+            {
+                ucHome uc = new ucHome();
+                uc.Dock = DockStyle.Fill;
+                FormMain.Instance.PnlContainer.Controls.Add(uc);
+            }
+            else
+            {
+                FormMain.Instance.PnlContainer.Controls["ucHome"].BringToFront();
+            }
+            tbNewArtist.Clear();
+        }
     }
 }

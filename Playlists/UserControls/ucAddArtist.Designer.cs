@@ -67,6 +67,7 @@ namespace Playlists
             this.buttonCancelArtist.TabIndex = 5;
             this.buttonCancelArtist.Text = "Cancel";
             this.buttonCancelArtist.UseVisualStyleBackColor = false;
+            this.buttonCancelArtist.Click += new System.EventHandler(this.buttonCancelArtist_Click);
             // 
             // buttonSaveArtist
             // 

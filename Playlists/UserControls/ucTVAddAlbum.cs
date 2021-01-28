@@ -151,6 +151,7 @@ namespace Playlists
 
                         db.Remove(artist);
                         twAddAlbums.Nodes.Remove(twAddAlbums.SelectedNode);
+                        db.SaveChanges();
                         
                     }
                 }
