@@ -14,6 +14,7 @@ namespace Playlists
         public PlayListContext(DbContextOptions<PlayListContext> options)
             : base(options)
         {
+
         }
 
         public virtual DbSet<Album> Albums { get; set; }
@@ -28,7 +29,7 @@ namespace Playlists
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=localhost;Database=everyloop;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=localhost;Database=everyloopNET;Trusted_Connection=True;");
             }
         }
 
