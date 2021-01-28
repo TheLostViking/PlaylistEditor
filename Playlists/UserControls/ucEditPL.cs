@@ -56,30 +56,40 @@ namespace Playlists
 
         private void buttonAddTracks_Click(object sender, EventArgs e)
         {
-            if(tWPL.SelectedNode.Tag is Playlist playlist && tWTr.SelectedNode.Tag is Track track)
+            if (tWPL.SelectedNode != null)
             {
-                var ptTrack = new PlaylistTrack()
+                if (tWPL.SelectedNode.Tag is Playlist playlist && tWTr.SelectedNode.Tag is Track track)
                 {
-                    PlaylistId = playlist.PlaylistId,
-                    TrackId = track.TrackId
-                };
-                db.PlaylistTracks.Add(ptTrack);
-
-                DialogResult result = MessageBox.Show($"Are you sure you want to add '{track.Name}'\n" +
-                    $" to playlist '{playlist.Name}'?",
-                    "Add tracks to playlist",
-                    MessageBoxButtons.OKCancel);
-                if (result == DialogResult.OK)
-                {
-                    db.SaveChanges();
-                    MessageBox.Show("Track added!");
-                    AddPlaylistsToList();
-
-                    var selectedNode = tWPL.Nodes.Find(tbSelectedPL.Text, false);
-                    if(selectedNode != null)
+                    var ptTrack = new PlaylistTrack()
                     {
-                        selectedNode[0].Expand();
+                        PlaylistId = playlist.PlaylistId,
+                        TrackId = track.TrackId
+                    };
+                    db.PlaylistTracks.Add(ptTrack);
+
+                    DialogResult result = MessageBox.Show($"Are you sure you want to add '{track.Name}'\n" +
+                        $" to playlist '{playlist.Name}'?",
+                        "Add tracks to playlist",
+                        MessageBoxButtons.OKCancel);
+                    if (result == DialogResult.OK)
+                    {
+                        db.SaveChanges();
+                        MessageBox.Show("Track added!");
+                                              
+                        AddPlaylistsToList();
+
+                        var selectedNode = tWPL.Nodes.Find(tbSelectedPL.Text, false);
+                        if (selectedNode != null)
+                        {
+                            selectedNode[0].Expand();
+                        }
+                        tbSelectedPL.Clear();
+                        tbSelectedTrack.Clear();
                     }
+                }
+                else
+                {
+                    MessageBox.Show("Select a playlist!");
                 }
             }
         }

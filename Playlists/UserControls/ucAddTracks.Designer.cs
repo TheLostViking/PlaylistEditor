@@ -127,7 +127,7 @@ namespace Playlists
             this.saveTracks.Location = new System.Drawing.Point(228, 111);
             this.saveTracks.Name = "saveTracks";
             this.saveTracks.Size = new System.Drawing.Size(120, 25);
-            this.saveTracks.TabIndex = 8;
+            this.saveTracks.TabIndex = 4;
             this.saveTracks.Text = "Save Changes";
             this.saveTracks.UseVisualStyleBackColor = false;
             this.saveTracks.Click += new System.EventHandler(this.saveTracks_Click);
@@ -159,7 +159,7 @@ namespace Playlists
             this.lbMinutes.Location = new System.Drawing.Point(194, 34);
             this.lbMinutes.Name = "lbMinutes";
             this.lbMinutes.Size = new System.Drawing.Size(76, 15);
-            this.lbMinutes.TabIndex = 7;
+            this.lbMinutes.TabIndex = 8;
             this.lbMinutes.Text = "(In Min : Sec)";
             // 
             // lbTrackLength
@@ -169,7 +169,7 @@ namespace Playlists
             this.lbTrackLength.Location = new System.Drawing.Point(194, 9);
             this.lbTrackLength.Name = "lbTrackLength";
             this.lbTrackLength.Size = new System.Drawing.Size(188, 25);
-            this.lbTrackLength.TabIndex = 5;
+            this.lbTrackLength.TabIndex = 7;
             this.lbTrackLength.Text = "Enter track length:";
             // 
             // tbTrackMin
@@ -177,7 +177,7 @@ namespace Playlists
             this.tbTrackMin.Location = new System.Drawing.Point(194, 52);
             this.tbTrackMin.Name = "tbTrackMin";
             this.tbTrackMin.Size = new System.Drawing.Size(154, 23);
-            this.tbTrackMin.TabIndex = 4;
+            this.tbTrackMin.TabIndex = 2;
             // 
             // lbTrackTitle
             // 
@@ -186,7 +186,7 @@ namespace Playlists
             this.lbTrackTitle.Location = new System.Drawing.Point(0, 9);
             this.lbTrackTitle.Name = "lbTrackTitle";
             this.lbTrackTitle.Size = new System.Drawing.Size(166, 25);
-            this.lbTrackTitle.TabIndex = 2;
+            this.lbTrackTitle.TabIndex = 6;
             this.lbTrackTitle.Text = "Enter track title:";
             // 
             // label2
@@ -215,7 +215,7 @@ namespace Playlists
             this.daGrTracks.RowTemplate.Height = 25;
             this.daGrTracks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.daGrTracks.Size = new System.Drawing.Size(411, 350);
-            this.daGrTracks.TabIndex = 0;
+            this.daGrTracks.TabIndex = 5;
             this.daGrTracks.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.daGrTracks_CellValueChanged);
             this.daGrTracks.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.daGrTracks_UserDeletingRow);
             // 

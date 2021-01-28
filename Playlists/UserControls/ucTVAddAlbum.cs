@@ -60,6 +60,9 @@ namespace Playlists
                                 {
                                     selectedNode[0].Expand();
                                 }
+                                
+                                tbAlbumTitle.Clear();
+                                
                             }
                         }
                     }
@@ -112,7 +115,7 @@ namespace Playlists
 
         private void tbAlbumTitle_TextChanged(object sender, EventArgs e)
         {
-            if(IsCorrectString(tbAlbumTitle.Text) == false)
+            if (IsCorrectString(tbAlbumTitle.Text) == false)
             {
                 MessageBox.Show("No special characters!");
             }
@@ -136,7 +139,7 @@ namespace Playlists
                         {
                             foreach (Album album in artist.Albums)
                             {
-                                if(album.Tracks.Count != 0)
+                                if (album.Tracks.Count != 0)
                                 {
                                     var tracksToRemove = db.Tracks.Where(t => t.AlbumId == album.AlbumId).ToList();
                                     db.RemoveRange(tracksToRemove);
@@ -148,11 +151,11 @@ namespace Playlists
 
                         db.Remove(artist);
                         twAddAlbums.Nodes.Remove(twAddAlbums.SelectedNode);
-                        db.SaveChanges();
+                        
                     }
                 }
             }
         }
 
-    }  
+    }
 }
