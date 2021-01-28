@@ -97,8 +97,8 @@ namespace Playlists
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(250, 30);
             this.label5.TabIndex = 5;
-            this.label5.Text = "If you wish to delete an album,\r\nsimply select it in the treeview and hit \'Delete" +
-    "\'!";
+            this.label5.Text = "If you wish to delete an artist,\r\nsimply select it in the treeview and hit \'Delet" +
+    "e\'!";
             // 
             // bAddnewAlbum
             // 
