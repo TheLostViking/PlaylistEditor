@@ -5,7 +5,8 @@ To start your project, download all the files and the backup file for the databa
 Restore the database in your db-manager.
 Run the project and build it, then run it from VS if you like, or from the .exe file in your pathfolder.
 
-Explanation on the different views: 
+Explanation on the different views:
+
 "CREATE PLAYLIST" - Where you create new playlist, only enter the title you want, and save. 'Cancel' takes you back to the "Home" view.
 
 "EDIT PLAYLISTS" - Here the main thing is to add existing tracks to existing playlists. The tracks are displayed by genre.
